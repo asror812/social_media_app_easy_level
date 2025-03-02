@@ -1,0 +1,45 @@
+* i shared image of test columns and asked which column answer the question of "test coverage"
+The test coverage is displayed in the right panel under "Element," showing percentages for class, method, line, and branch coverage.
+
+    Class Coverage: Percentage of classes covered by tests.
+    Method Coverage: Percentage of methods covered.
+    Line Coverage: Percentage of lines of code executed by tests.
+    Branch Coverage: Percentage of branches (if-else conditions) covered.
+
+For example:
+
+    PostController has 100% line coverage (5/5 lines tested).
+    UserController has 71% line coverage (5/7 lines tested).
+    PostDao and UserDao have 0% line coverage (not tested).
+
+
+If you’re looking for coverage at a specific line in the code editor, the yellow light bulb (on line 38) might indicate that the line is not fully covered by tests.
+* You said:
+so when they want test coverage over 80 percent which percentage they mean ?
+ChatGPT said:
+
+When someone wants test coverage over 80%, they typically refer to line coverage, meaning that at least 80% of the lines in the codebase should be executed by tests. However, in some cases, they might also consider method coverage or branch coverage, depending on the project's quality requirements.
+Breakdown of the Coverage Metrics:
+
+    Class Coverage: How many classes have at least some of their code executed by tests.
+    Method Coverage: How many methods are executed by tests.
+    Line Coverage (most commonly used): The percentage of lines executed at least once by tests.
+    Branch Coverage (strictest): The percentage of conditional branches (e.g., if-else) that have been tested.
+
+In your case:
+
+    Your overall line coverage is 20% (38/188 lines tested).
+    Your method coverage is 26% (36/136 methods tested).
+    Your branch coverage is 0%, meaning no conditional logic has been explicitly tested.
+
+👉 If the requirement is 80% test coverage, they likely mean 80% line coverage.
+You need to write more tests that execute more lines of your code, especially in dao and dto packages, where coverage is currently low or zero.
+
+
+
+* i have users table and need to realize following so user could follow many other users ?
+
+To implement a feature where a user can follow many other users in your application, you can introduce a "follower" relationship. Here's a step-by-step guide using a relational database approach:
+
+    Create a User Table: Ensure your users table is set up properly. This table will store user information.
+    sql
